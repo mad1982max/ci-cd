@@ -19,3 +19,14 @@ jobs:
         run: npm ci
       - name: Lint application
         run: npm run lint
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the repo code
+        uses: actions/checkout@v3
+      - name: Install Dependencies
+        run: npm ci
+      - name: Build application
+        run: npm run build
+      - name: Fake Deploy
+        run: echo Deploying...
